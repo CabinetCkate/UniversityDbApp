@@ -1,0 +1,3 @@
+@model UniversityDbApp.Models.Teacher
+@{ ViewData["Title"] = "Новый преподаватель"; }
+<div class="page-wrap form-page"><a class="back-link" asp-action="Index">← Все преподаватели</a><div class="page-heading"><div><div class="eyebrow">АКАДЕМИЧЕСКОЕ СООБЩЕСТВО</div><h1>Новый преподаватель</h1><p>Добавьте профиль и свяжите его с кафедрой.</p></div></div><form asp-action="Create" class="panel form-panel"><partial name="_Form" model="Model"/><div class="form-footer"><a class="button button-outline" asp-action="Index">Отмена</a><button class="button button-primary">Добавить преподавателя</button></div></form></div>

@@ -1,0 +1,3 @@
+@model UniversityDbApp.Models.Department
+@{ ViewData["Title"] = "Удалить кафедру"; }
+<div class="page-wrap form-page"><a class="back-link" asp-action="Index">← Все кафедры</a><section class="panel confirm-panel"><div class="feature-icon violet">!</div><div class="eyebrow">ПОДТВЕРЖДЕНИЕ</div><h1>Удалить кафедру?</h1><p>Кафедра «@Model.Name» связана с @Model.Teachers.Count преподавателями. Удаление возможно только после переноса связанных записей.</p><form asp-action="Delete" asp-route-id="@Model.Id"><button class="button button-danger" type="submit" disabled="@(Model.Teachers.Count > 0)">Удалить кафедру</button><a class="button button-outline" asp-action="Index">Вернуться</a></form></section></div>
